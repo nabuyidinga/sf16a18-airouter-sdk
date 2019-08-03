@@ -1,0 +1,36 @@
+# configuration for sf -mm
+# 2018.10.30
+#
+#following parameter is for aispeech
+wakeup_key_words=ni hao xiao le,xiao lu ni hao,xiao lu tong xue,xiao lu xiao lu,xiu mian mo shi,wo yao lian wang,xue sheng mo shi,jian ce wang su,hui fu wang luo,hui fu sheng yin,xiao lu jing yin,guan bi nao zhong
+wakeup_key_threshold=0.15,0.11,0.06,0.08,0.06,0.12,0.08,0.02,0.05,0.07,0.07,0.06
+product_id=278575522
+alias_key=1
+saved_profile=/lib/firmware/278575522.txt
+product_key=xx
+product_secret=xxx
+fespl_roll_back=0
+vad_pause_time=700
+dump_raw_enable=0
+dump_fespl_enable=0
+dump_vad_enable=0
+dds_perf_measure=0
+
+#wifi auto hidden time interval in ms
+wifi_hidden_interval=40000
+#support continuous chat mode
+continuous_chat_enable=1
+#corrupted data workaround
+bd_workaround_enable=0
+#default speaker volume ,range 0-100
+default_speak_volume=10
+
+
+
+#following parameter is for dsp hardware(8008)
+#websocket_addr=cloud.siflower.cn
+#websocket_path=/v1/websocketAI
+#websocket_port=443
+#websocket_hb_timeout=15
+#websocket_tx_timeout=60
+#websocket_noactive_time=300

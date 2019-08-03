@@ -1,0 +1,34 @@
+config setting 'qos'
+
+config setting 'wifi_filter'
+
+config setting 'wan_type'
+
+config setting 'onlinewarn'
+        option enable '0'
+
+config setting 'timelist'
+        option start '22:00'
+        option end   '18:00'
+        option limitdown   '100'
+
+config setting 'guide'
+        option enable 1
+
+config setting 'lease_wifi'
+        option speed 0
+
+config setting 'country_code'
+        option enable '0'
+
+config setting 'mode'
+        option mode_code 0
+
+config setting 'speed'
+        option enable '0'
+
+config setting 'security_mode'
+        option enable 0
+
+config setting 'student_mode'
+        option enable 0

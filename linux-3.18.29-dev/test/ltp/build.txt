@@ -1,0 +1,9 @@
+#example for build ltp with cross-compiler
+
+make autotools
+
+./configure --prefix=～/_install --host=mips-mti-linux-gnu "CC=mips-mti-linux-gnu-gcc -EL" "LDFLAGS=-EL" 
+
+make
+
+make install

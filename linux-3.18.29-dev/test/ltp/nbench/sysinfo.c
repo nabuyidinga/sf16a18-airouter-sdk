@@ -1,0 +1,10 @@
+sprintf(buffer,"**System used for compilation:\n");
+output_string(buffer);
+sprintf(buffer,"**Linux tanchong 4.2.0-41-generic #48~14.04.1-Ubuntu SMP Fri Jun 24 17:09:15 UTC\n");
+output_string(buffer);
+sprintf(buffer,"**C compiler: gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) \n");
+output_string(buffer);
+sprintf(buffer,"**libc: libc-2.19.so\n");
+output_string(buffer);
+sprintf(buffer,"**Date of compilation: 2016年 08月 31日 星期三 13:58:03 CST\n");
+output_string(buffer);

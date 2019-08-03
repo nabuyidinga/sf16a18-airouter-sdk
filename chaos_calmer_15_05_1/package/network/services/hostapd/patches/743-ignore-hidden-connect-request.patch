@@ -1,0 +1,17 @@
+Index: hostapd-2015-03-25/src/ap/beacon.c
+===================================================================
+--- hostapd-2015-03-25.orig/src/ap/beacon.c	2018-11-06 10:07:50.861038199 +0800
++++ hostapd-2015-03-25/src/ap/beacon.c	2018-11-06 10:11:24.629044501 +0800
+@@ -642,8 +642,12 @@
+ 	}
+ 
+ check_hidden:
++#if 0
+ 	if (hapd->conf->ignore_broadcast_ssid && elems.ssid_len == 0 &&
+ 	    elems.ssid_list_len == 0) {
++#else
++	if (hapd->conf->ignore_broadcast_ssid) {
++#endif
+ 		wpa_printf(MSG_MSGDUMP, "Probe Request from " MACSTR " for "
+ 			   "broadcast SSID ignored", MAC2STR(mgmt->sa));
+ 		return;

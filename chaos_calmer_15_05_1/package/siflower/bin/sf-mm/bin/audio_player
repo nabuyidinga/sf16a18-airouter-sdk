@@ -1,0 +1,8 @@
+#!/bin/sh
+volume=0
+if [ "$2" == "" ]; then
+	volume=0.10
+else
+	volume=$2
+fi
+gst-launch-1.0 -q playbin uri=file://${1} volume=${volume}

@@ -1,0 +1,4 @@
+This program help us update sf-mm service local audio resource.
+How to use:
+	1. run update.sh  /lib/firmware/audio.txt
+	2. update audio resouce, cp /tmp/audio/* /usr/share/sf-mm/audio_files/

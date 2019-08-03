@@ -1,0 +1,21 @@
+# configuration for sf -mm
+# 2018.10.30
+#
+#following parameter is for aispeech
+wakeup_key_words=ni hao xiao lu
+wakeup_key_threshold=0.05
+product_id=278575522
+alias_key=205ec6a273654205b65a360c48abb8e3
+saved_profile=/lib/firmware/278575522.txt
+product_key=xx
+product_secret=xxx
+fespl_roll_back=0
+vad_pause_time=700
+
+#following parameter is for dsp hardware(8008)
+#websocket_addr=cloud.siflower.cn
+#websocket_path=/v1/websocketAI
+#websocket_port=443
+#websocket_hb_timeout=15
+#websocket_tx_timeout=60
+#websocket_noactive_time=300

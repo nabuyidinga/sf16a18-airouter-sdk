@@ -1,0 +1,83 @@
+#!/bin/sh
+logger -t mount  in arg $DEVPATH $ACTION $DEVICENAME
+set_fstab(){
+	case $DEVICENAME in
+		*sd*)
+			temp_tar=`uci get fstab.@mount[0].target`;
+		;;
+		mmcblk0*)
+			temp_tar=`uci get fstab.@mount[1].target`;
+		;;
+	esac
+
+	if [[ $temp_tar == "/mnt/sda1" ]]; then
+		fs_index=0;
+	else
+		fs_index=1;
+	fi
+
+	logger -t mount fs_index choose $fs_index;
+	uci set fstab.@mount[$fs_index].device=/dev/$DEVICENAME;
+	case $ACTION in
+		add)
+			if [ $fs_index -eq 0 ]; then
+				temp_fs=`block info |grep sd |awk -F 'TYPE="' '{print $2}'`;
+			else
+				temp_fs=`block info |grep mmcblk0 |awk -F 'TYPE="' '{print $2}'`;
+			fi
+
+			if [[ $temp_fs == "ntfs\"" ]]; then
+				uci set fstab.@mount[$fs_index].options="rw,nls=utf8";
+				uci set fstab.@mount[$fs_index].fstype="ntfs-3g";
+				mount_tar=$temp_tar;
+			else
+				uci set fstab.@mount[$fs_index].options="rw,codepage=936,iocharset=utf8";
+			fi
+
+		;;
+		remove)
+			temp_fs=`uci get fstab.@mount[$fs_index].fstype`;
+			if [[ $temp_fs == "ntfs-3g" ]]; then
+				uci set fstab.@mount[$fs_index].fstype="";
+				mount_tar=$temp_tar;
+			fi
+		;;
+	esac
+
+	logger -t mount temp_fs $temp_fs;
+
+	uci commit fstab;
+}
+
+set_ntfs(){
+	case $ACTION in
+		add)
+			logger -t mount add device $mount_tar
+			mount /dev/$DEVICENAME $mount_tar
+		;;
+		remove)
+			logger -t mount remove device $mount_tar
+			umount $mount_tar
+		;;
+	esac
+}
+
+case $DEVICENAME in
+	*sd*)
+		set_fstab
+
+		logger -t mount option $mount_tar
+		[ -n "$mount_tar"  ] && {
+			set_ntfs
+		}
+	;;
+	mmcblk0*)
+		set_fstab
+
+		logger -t mount option $mount_tar
+		[ -n "$mount_tar"  ] && {
+			set_ntfs
+		}
+	;;
+esac
+/sbin/block hotplug

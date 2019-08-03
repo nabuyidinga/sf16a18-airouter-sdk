@@ -1,0 +1,147 @@
+shmarea.lo: shmarea.c ../include/config.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdio.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/features.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_config.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/cdefs.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mipsel-openwrt-linux-uclibc/4.8.3/include/stddef.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/types.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wordsize.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/typesizes.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/pthreadtypes.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/endian.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/endian.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/byteswap.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap-common.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sgidefs.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_stdio.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/wchar.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wchar.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_mutex.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/pthread.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sched.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/time.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sched.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/time.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_clk_tck.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/signal.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sigset.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/setjmp.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_pthread.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mipsel-openwrt-linux-uclibc/4.8.3/include/stdarg.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/stdio_lim.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/malloc.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/string.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/errno.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/errno.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/linux/errno.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/errno.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm-generic/errno-base.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/poll.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/poll.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/poll.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/mman.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/mman.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/shm.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/ipc.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/ipc.h \
+ /home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/shm.h \
+ ../include/list.h
+
+../include/config.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdio.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/features.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_config.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/cdefs.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mipsel-openwrt-linux-uclibc/4.8.3/include/stddef.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/types.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wordsize.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/typesizes.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/pthreadtypes.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/endian.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/endian.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/byteswap.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap-common.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sgidefs.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_stdio.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/wchar.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wchar.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_mutex.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/pthread.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sched.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/time.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sched.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/time.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_clk_tck.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/signal.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sigset.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/setjmp.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_pthread.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mipsel-openwrt-linux-uclibc/4.8.3/include/stdarg.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/stdio_lim.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/malloc.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/string.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/errno.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/errno.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/linux/errno.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/errno.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm-generic/errno-base.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/poll.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/poll.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/poll.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/mman.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/mman.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/shm.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/ipc.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/ipc.h:
+
+/home/chong/openwrt_mtk_mt7620/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/shm.h:
+
+../include/list.h:

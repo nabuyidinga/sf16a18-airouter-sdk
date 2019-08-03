@@ -1,0 +1,82 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2006-2011 OpenWrt.org
+
+START=99
+
+USE_PROCD=1
+PROG=/usr/sbin/sf-mm
+
+. /lib/functions.sh
+append_arg() {
+	local cfg="$1"
+	local var="$2"
+	local opt="$3"
+	local def="$4"
+	local val
+
+	config_get val "$cfg" "$var"
+	[ -n "$val" -o -n "$def" ] && procd_append_param command "$opt" "${val:-$def}"
+}
+
+config_wifi_normal() {
+	local enc=""
+	local section="$1"
+	enc=$(uci get wireless.${section}.encryption)
+	if [ "$enc" == "none" ] || [ "$enc" == "open" ]; then
+		uci set wireless.${section}.encryption="psk2+ccmp"
+	fi
+	uci set wireless.${section}.hidden=0
+}
+
+config_wifi_hidden() {
+	local type=""
+	section="$1"
+	type=$(uci get wireless.${section}.network)
+	if [ "$type" == "lan" ]; then
+		uci set wireless.${section}.encryption="none"
+		uci set wireless.${section}.hidden=1
+	fi
+}
+
+config_wifi() {
+	config_load wireless
+	if [ "$1" == "hidden" ]; then
+		config_foreach config_wifi_hidden wifi-iface
+	fi
+	if [ "$1" == "normal" ]; then
+		config_foreach config_wifi_normal wifi-iface
+	fi
+	uci commit wireless
+	wifi
+}
+
+start_service () {
+	aplay -q /usr/share/sf-mm/audio_files/silent.wav
+	procd_open_instance
+	procd_set_param command "$PROG" "$1"
+	procd_set_param respawn
+	procd_close_instance
+	network_check.sh &
+	dsb &
+}
+
+service_running() {
+	echo "sf-mm service  running" > /dev/ttyS0
+}
+
+
+stop_service()
+{
+	echo "stop sf-mm" > /dev/ttyS0
+	kill -9 `ps | grep "network_check.sh" | grep -v "grep" | awk '{print $1}'`
+	kill -9 `ps | grep "dsb" | grep -v "grep" | awk '{print $1}'`
+	kill -9 `ps | grep "sf-mm" | grep -v "grep" | awk '{print $1}'`
+}
+
+shutdown()
+{
+	echo "shutdown sf-mm" > /dev/ttyS0
+	kill -9 `ps | grep "network_check.sh" | grep -v "grep" | awk '{print $1}'`
+	kill -9 `ps | grep "dsb" | grep -v "grep" | awk '{print $1}'`
+	kill -9 `ps | grep "sf-mm" | grep -v "grep" | awk '{print $1}'`
+}

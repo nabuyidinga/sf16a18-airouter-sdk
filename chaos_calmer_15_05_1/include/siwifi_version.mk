@@ -1,0 +1,3 @@
+VERSION_DIST:=SiWiFi
+VERSION_NICK:=$(PROFILE)
+VERSION_NUMBER:=openwrt_release_p10m_fullmask_rel_4.0.1_9404788

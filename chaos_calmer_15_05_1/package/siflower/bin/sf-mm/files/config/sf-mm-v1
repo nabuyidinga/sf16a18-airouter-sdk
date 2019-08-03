@@ -1,0 +1,10 @@
+# configuration for sf -mm
+# 2018.10.30
+#
+#following parameter is for dsp hardware(8008)
+websocket_addr=cloud.siflower.cn
+websocket_path=/v1/websocketAI
+websocket_port=443
+websocket_hb_timeout=15
+websocket_tx_timeout=60
+websocket_noactive_time=300

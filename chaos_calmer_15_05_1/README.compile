@@ -1,0 +1,3 @@
+./make.sh air001v2 fullmask for smartaudio board v2
+./make.sh air001v4 fullmask for smartaudio board v4
+./make.sh air001v5 fullmask for smartaudio board v5 and v6

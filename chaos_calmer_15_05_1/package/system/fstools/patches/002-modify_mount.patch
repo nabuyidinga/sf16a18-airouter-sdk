@@ -1,0 +1,12 @@
+Index: fstools-2016-01-10/libfstools/overlay.c
+===================================================================
+--- fstools-2016-01-10.orig/libfstools/overlay.c	2018-06-27 10:11:34.254611134 +0800
++++ fstools-2016-01-10/libfstools/overlay.c	2018-06-27 10:12:37.642613794 +0800
+@@ -223,6 +223,7 @@
+ 			ULOG_INFO("performing overlay whiteout\n");
+ 			umount2("/tmp/root", MNT_DETACH);
+ 			foreachdir("/overlay/", handle_whiteout);
++			system("if [  -f /sbin/block ]; then /sbin/block mount;fi");
+ 		}
+ 		break;
+ 

@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC			= $(shell head -n 1 conf-cc)$/;"	m
+CHECKERBOARD1	sizes.h	23;"	d
+CHECKERBOARD1	sizes.h	31;"	d
+CHECKERBOARD2	sizes.h	24;"	d
+CHECKERBOARD2	sizes.h	32;"	d
+EXIT_FAIL_ADDRESSLINES	memtester.c	33;"	d	file:
+EXIT_FAIL_NONSTARTER	memtester.c	32;"	d	file:
+EXIT_FAIL_OTHERTEST	memtester.c	34;"	d	file:
+HEADERS	Makefile	/^HEADERS		= memtester.h$/;"	m
+INSTALLPATH	Makefile	/^INSTALLPATH	= \/usr\/local$/;"	m
+LD	Makefile	/^LD			= $(shell head -n 1 conf-ld)$/;"	m
+MAP_LOCKED	memtester.c	92;"	d	file:
+OBJECTS	Makefile	/^OBJECTS		= $(SOURCES:.c=.o)$/;"	m
+ONE	tests.c	28;"	d	file:
+PROGRESSLEN	tests.c	26;"	d	file:
+PROGRESSOFTEN	tests.c	27;"	d	file:
+SOURCES	Makefile	/^SOURCES		= memtester.c tests.c$/;"	m
+TARGETS	Makefile	/^TARGETS     = *.o compile load auto-ccld.sh find-systype make-compile make-load systype extra-libs$/;"	m
+UL_BYTE	sizes.h	25;"	d
+UL_BYTE	sizes.h	33;"	d
+UL_LEN	sizes.h	22;"	d
+UL_LEN	sizes.h	30;"	d
+UL_ONEBITS	sizes.h	21;"	d
+UL_ONEBITS	sizes.h	29;"	d
+__version__	memtester.c	15;"	d	file:
+bytes	types.h	/^    unsigned char bytes[UL_LEN\/8];$/;"	m	union:__anon1
+check_posix_system	memtester.c	/^void check_posix_system(void) {$/;"	f
+check_posix_system	memtester.c	69;"	d	file:
+compare_regions	tests.c	/^int compare_regions(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+fp	types.h	/^    int (*fp)();$/;"	m	struct:test
+main	memtester.c	/^int main(int argc, char **argv) {$/;"	f
+main	trycpp.c	/^void main()$/;"	f
+memtester_pagesize	memtester.c	/^int memtester_pagesize(void) {$/;"	f
+mword16	types.h	/^} mword16;$/;"	v	typeref:union:__anon2
+mword8	types.h	/^} mword8;$/;"	v	typeref:union:__anon1
+name	types.h	/^    char *name;$/;"	m	struct:test
+physaddrbase	memtester.c	/^off_t physaddrbase = 0;$/;"	v
+progress	tests.c	/^char progress[] = "-\\\\|\/";$/;"	v
+rand32	sizes.h	17;"	d
+rand64	sizes.h	27;"	d
+rand_ul	sizes.h	20;"	d
+rand_ul	sizes.h	28;"	d
+test	types.h	/^struct test {$/;"	s
+test_16bit_wide_random	tests.c	/^int test_16bit_wide_random(ulv* bufa, ulv* bufb, size_t count) {$/;"	f
+test_8bit_wide_random	tests.c	/^int test_8bit_wide_random(ulv* bufa, ulv* bufb, size_t count) {$/;"	f
+test_and_comparison	tests.c	/^int test_and_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_bitflip_comparison	tests.c	/^int test_bitflip_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_bitspread_comparison	tests.c	/^int test_bitspread_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_blockseq_comparison	tests.c	/^int test_blockseq_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_checkerboard_comparison	tests.c	/^int test_checkerboard_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_div_comparison	tests.c	/^int test_div_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_mul_comparison	tests.c	/^int test_mul_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_or_comparison	tests.c	/^int test_or_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_random_value	tests.c	/^int test_random_value(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_seqinc_comparison	tests.c	/^int test_seqinc_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_solidbits_comparison	tests.c	/^int test_solidbits_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_stuck_address	tests.c	/^int test_stuck_address(ulv *bufa, size_t count) {$/;"	f
+test_sub_comparison	tests.c	/^int test_sub_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_walkbits0_comparison	tests.c	/^int test_walkbits0_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_walkbits1_comparison	tests.c	/^int test_walkbits1_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+test_xor_comparison	tests.c	/^int test_xor_comparison(ulv *bufa, ulv *bufb, size_t count) {$/;"	f
+tests	memtester.c	/^struct test tests[] = {$/;"	v	typeref:struct:test
+u16s	types.h	/^    unsigned short u16s[UL_LEN\/16];$/;"	m	union:__anon2
+u16v	types.h	/^typedef unsigned short volatile u16v;$/;"	t
+u8v	types.h	/^typedef unsigned char volatile u8v;$/;"	t
+ul	types.h	/^typedef unsigned long ul;$/;"	t
+ull	types.h	/^typedef unsigned long long ull;$/;"	t
+ulv	types.h	/^typedef unsigned long volatile ulv;$/;"	t
+usage	memtester.c	/^void usage(char *me) {$/;"	f
+use_phys	memtester.c	/^int use_phys = 0;$/;"	v
+val	types.h	/^    ul val;$/;"	m	union:__anon1
+val	types.h	/^    ul val;$/;"	m	union:__anon2

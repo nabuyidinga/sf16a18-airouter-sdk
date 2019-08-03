@@ -1,0 +1,53 @@
+#!/bin/sh
+. /lib/functions.sh
+. /usr/share/libubox/jshn.sh
+
+cookie_path=/tmp/auto_cookie
+
+auto_ota_logger(){
+	logger "auto ota: $@"
+}
+
+get_stok() {
+	auth=$(cat /etc/shadow | sed -n '1p' | awk -F ':' '{print $2}')
+	if [ "x$auth" = "x" ];then
+		curl -D $1 "http://127.0.0.1/cgi-bin/luci/api/sfsystem/get_stok_local" -d '{"version":"V10","luci_name":"admin"}'
+	else
+		curl -D $1 -H "Authorization: $auth" "http://127.0.0.1/cgi-bin/luci/api/sfsystem/get_stok_local" -d '{"version":"V10","luci_name":"admin"}'
+	fi
+	result=`awk -F: ' /path/ {split($2,myarry,"=")} END {print myarry[4]}' $1`
+	if [ -n $result ]; then
+		echo "$result"
+		return 1
+	else
+		return 0
+	fi
+}
+
+start_ota() {
+	url="http://127.0.0.1/cgi-bin/luci/;stok="$1"/api/sfsystem/ota_check2"
+	check_result=`curl -b $2 -H "Content-type:application/json" -X POST $url -d '{"version":"V10","luci_name":"admin"}'`
+	auto_ota_logger $check_result
+	json_load "$check_result"
+	json_get_vars romversion otaversion code type force checksum size url
+	if [ "x$code" != "x0" ]; then
+		auto_ota_logger "get error code=$code"
+		return 1
+	fi
+	local_version=$(echo $romversion | awk -F ' ' '{print $3}')
+	if [ "x$local_version" != "x$otaversion" -a "x$force" == "x1" ]; then
+		echo "{\"size\": $size,\"url\": \"$url\",\"checksum\": \"$checksum\"}" > /tmp/ota_info
+		/usr/bin/otaupgrade
+		return 1
+	else
+		auto_ota_logger "same version or code=$code"
+		return 1
+	fi
+}
+
+cookie=`get_stok $cookie_path | tr -d "\r"`
+if [ -z $cookie ]; then
+	auto_ota_logger "get stok fail :$cookie"
+	return 0
+fi
+start_ota $cookie $cookie_path
